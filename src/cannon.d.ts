@@ -406,6 +406,10 @@ declare module CANNON {
 
     }
 
+    export class Trimesh {
+        constructor(vertices: number[],  indices: number[] );
+    }
+
     export class Vec3 {
 
         static ZERO: Vec3;
@@ -530,6 +534,7 @@ declare module CANNON {
         pointToWorldFrame(localPoint: Vec3, result?: Vec3): Vec3;
         vectorToWorldFrame(localVector: Vec3, result?: Vec3): Vec3;
         addShape(shape: Shape, offset?: Vec3, orientation?: Quaternion): void;
+        addShape(shape: Trimesh, offset?: Vec3, orientation?: Quaternion): void;
         updateBoundingRadius(): void;
         computeAABB(): void;
         updateInertiaWorld(force: Vec3): void;
