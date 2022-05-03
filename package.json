@@ -17,10 +17,12 @@
     "@dcl/ecs-scene-utils": "^1.7.5",
     "@dcl/ui-scene-utils": "^1.8.3",
     "@types/cannon": "^0.1.4",
-    "cannon": "github:schteppe/cannon.js"
+    "cannon": "github:schteppe/cannon.js",
+    "dcldash": "^0.0.25"
   },
-  "bundleDependencies": [
+  "bundledDependencies": [
     "@dcl/ecs-scene-utils",
-    "@dcl/ui-scene-utils"
+    "@dcl/ui-scene-utils",
+    "dcldash"
   ]
 }
