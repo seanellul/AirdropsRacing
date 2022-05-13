@@ -66,7 +66,7 @@ import { getPlayerData } from '@decentraland/Players'
         const groundMaterial: CANNON.Material = new CANNON.Material("groundMaterial")
         const wheelMaterial: CANNON.Material = new CANNON.Material("wheelMaterial")
         const wheelGroundContactMaterial: CANNON.ContactMaterial = new CANNON.ContactMaterial(wheelMaterial, groundMaterial, {
-          friction: 0.3,
+          friction: 0.001,
           restitution: 0,
           contactEquationStiffness: 1000,
         })
@@ -480,10 +480,10 @@ engine.addEntity(thirdpersonviewtrigger)
               this.movement += dt
               
               if(thirdpersonmode == 1){
-                movePlayerTo(getEntityWorldPosition(thirdpersonviewtrigger),getEntityWorldPosition(gizmo))
+                movePlayerTo(getEntityWorldPosition(thirdpersonviewtrigger),null)
 
               }else{
-              movePlayerTo(getEntityWorldPosition(tracker),getEntityWorldPosition(gizmo))
+              movePlayerTo(getEntityWorldPosition(tracker),null)
               }
           }
       }
@@ -545,7 +545,6 @@ engine.addEntity(thirdpersonviewtrigger)
       let cubeOuterZPosition: number = 60
       let cubeStartSize: 1.25
       let cubeStartHeight: 2
-      
 
       const blueCubeMaterial = new Material()
       blueCubeMaterial.roughness = 0.5
@@ -592,8 +591,8 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
-                  scale: new Vector3(1.25, 1.25, 1.25),
+                  rotation: new Quaternion(0,0,0,0),
+                  scale: new Vector3(1.25, 9.25, 1.25),
                 })
               )
               cube.addComponent(blueCubeMaterial)
@@ -622,7 +621,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -645,7 +644,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -668,7 +667,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -691,7 +690,7 @@ engine.addEntity(thirdpersonviewtrigger)
                 cube.addComponent(
                   new Transform({
                     position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                    rotation: new Quaternion(35,0,220,0),
+                    rotation: new Quaternion(0,0,0,0),
                     scale: new Vector3(1.25, 1.25, 1.25),
                   })
                 )
@@ -714,7 +713,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -735,7 +734,7 @@ engine.addEntity(thirdpersonviewtrigger)
                 cube.addComponent(
                   new Transform({
                     position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                    rotation: new Quaternion(35,0,220,0),
+                    rotation: new Quaternion(0,0,0,0),
                     scale: new Vector3(1.25, 1.25, 1.25),
                   })
                 )
@@ -766,7 +765,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -789,7 +788,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -812,7 +811,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -835,7 +834,7 @@ engine.addEntity(thirdpersonviewtrigger)
                     cube.addComponent(
                       new Transform({
                         position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                        rotation: new Quaternion(35,0,220,0),
+                        rotation: new Quaternion(0,0,0,0),
                         scale: new Vector3(1.25, 1.25, 1.25),
                       })
                     )
@@ -857,7 +856,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -880,7 +879,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -911,7 +910,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -934,7 +933,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -957,7 +956,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -980,7 +979,7 @@ engine.addEntity(thirdpersonviewtrigger)
                     cube.addComponent(
                       new Transform({
                         position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                        rotation: new Quaternion(35,0,220,0),
+                        rotation: new Quaternion(0,0,0,0),
                         scale: new Vector3(1.25, 1.25, 1.25),
                       })
                     )
@@ -1003,7 +1002,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1025,7 +1024,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -1055,7 +1054,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1078,7 +1077,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1101,7 +1100,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1124,7 +1123,7 @@ engine.addEntity(thirdpersonviewtrigger)
                     cube.addComponent(
                       new Transform({
                         position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                        rotation: new Quaternion(35,0,220,0),
+                        rotation: new Quaternion(0,0,0,0),
                         scale: new Vector3(1.25, 1.25, 1.25),
                       })
                     )
@@ -1147,7 +1146,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1194,7 +1193,7 @@ engine.addEntity(thirdpersonviewtrigger)
                 cube.addComponent(
                   new Transform({
                     position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                    rotation: new Quaternion(35,0,220,0),
+                    rotation: new Quaternion(0,0,0,0),
                     scale: new Vector3(1.25, 1.25, 1.25),
                   })
                 )
@@ -1225,7 +1224,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1247,7 +1246,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1270,7 +1269,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1293,7 +1292,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -1324,7 +1323,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1346,7 +1345,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1369,7 +1368,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1392,7 +1391,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -1423,7 +1422,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1445,7 +1444,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1468,7 +1467,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1491,7 +1490,7 @@ engine.addEntity(thirdpersonviewtrigger)
               cube.addComponent(
                 new Transform({
                   position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                  rotation: new Quaternion(35,0,220,0),
+                  rotation: new Quaternion(0,0,0,0),
                   scale: new Vector3(1.25, 1.25, 1.25),
                 })
               )
@@ -1522,7 +1521,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1544,7 +1543,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1567,7 +1566,7 @@ engine.addEntity(thirdpersonviewtrigger)
                   cube.addComponent(
                     new Transform({
                       position: new Vector3(cubepositionX, cubepositionY, cubepositionZ),
-                      rotation: new Quaternion(35,0,220,0),
+                      rotation: new Quaternion(0,0,0,0),
                       scale: new Vector3(1.25, 1.25, 1.25),
                     })
                   )
@@ -1627,11 +1626,11 @@ engine.addEntity(thirdpersonviewtrigger)
 let joy = 0
 let happiness = 1
 
-let racetrack = menu.addText('Race Track Toggle', 0, 100)
+let racetrack = menu.addText('Race Track Toggle', 0, 120)
 let racetrackbutton = menu.addSwitch(
   '',
   0,
-  50,
+  70,
   () => {
     if (happiness == 1){
 
