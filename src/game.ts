@@ -475,18 +475,21 @@ engine.addEntity(thirdpersonviewtrigger)
       export class mover implements ISystem {
 
           private movement: number = 0
+          private timer: number = 0
 
           update(dt: number) {
               this.movement += dt
               
               if(thirdpersonmode == 1){
-                movePlayerTo(getEntityWorldPosition(thirdpersonviewtrigger),null)
+                movePlayerTo(getEntityWorldPosition(thirdpersonviewtrigger),getEntityWorldPosition(gizmo))
 
               }else{
-              movePlayerTo(getEntityWorldPosition(tracker),null)
+              movePlayerTo(getEntityWorldPosition(tracker),getEntityWorldPosition(gizmo))
               }
+              this.timer=0
+            }
           }
-      }
+          
       let movesysteminstance = new mover()
       engine.addSystem(movesysteminstance)
 
